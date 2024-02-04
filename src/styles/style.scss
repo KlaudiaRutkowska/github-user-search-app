@@ -8,12 +8,14 @@
     --bg-color: #{$bg-light};
     --logo-color: #{$logo-color-light};
     --btn-text-color: #{$btn-text-color-light};
+    --btn-text-hover-color: #{$btn-text-hover-color-light};
 }
 
 :root.dark {
     --bg-color: #{$bg-dark};
     --logo-color: #{$logo-color-dark};
     --btn-text-color: #{$btn-text-color-dark};
+    --btn-text-hover-color: #{$btn-text-hover-color-dark};
 }
 
 body {
@@ -36,6 +38,11 @@ body {
 
         button.mode {
             color: var(--btn-text-color);
+            transition: color 150ms ease-in-out;
+
+            &:hover {
+                color: var(--btn-text-hover-color);
+            }
         }
     }
 }
