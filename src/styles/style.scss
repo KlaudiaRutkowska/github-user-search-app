@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import "reset-css";
+@import "responsive";
+@import "variables";
+@import "header";
+
+:root {
+    --bg-color: #{$bg-light};
+    --logo-color: #{$logo-color-light};
+    --btn-text-color: #{$btn-text-color-light};
+}
+
+:root.dark {
+    --bg-color: #{$bg-dark};
+    --logo-color: #{$logo-color-dark};
+    --btn-text-color: #{$btn-text-color-dark};
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .container {
+        font-family: "Space Mono", monospace;
+    }
+
+    header {
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--logo-color);
+        }
+
+        button.mode {
+            color: var(--btn-text-color);
+        }
+    }
+}
