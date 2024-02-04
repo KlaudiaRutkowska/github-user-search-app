@@ -11,11 +11,14 @@ $bg-container-dark: #1e2a47;
 $font-color-light: #2b3442;
 $font-color-dark: #ffffff;
 
+$logo-color-light: #222731;
+$logo-color-dark: $font-color-dark;
+
 $btn-text-color-light: #697C9A;
 $btn-text-color-dark: $font-color-dark;
 
-$logo-color-light: #222731;
-$logo-color-dark: $font-color-dark;
+$btn-text-hover-color-light: $logo-color-light;
+$btn-text-hover-color-dark: #90A4D4;
 
 $link-color-light: #4b6a9b;
 $link-color-dark: $font-color-dark;
