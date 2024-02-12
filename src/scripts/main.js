@@ -1,4 +1,5 @@
 import "../styles/style.scss"
+import "./fetchUserData.js"
 
 let isDarkMode = false;
 const modeButton = document.querySelector("button.mode")
