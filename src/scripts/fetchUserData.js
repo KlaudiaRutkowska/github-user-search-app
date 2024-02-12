@@ -1,6 +1,8 @@
+import { animateCountUp } from "./countUp"
+
 // const username = "KlaudiaRutkowska"
-const username = "octocat"
-// const username = "Juraso2"
+// const username = "octocat"
+const username = "Juraso2"
 
 fetch(`https://api.github.com/users/${ username }`)
     .then(response => {
@@ -21,9 +23,14 @@ fetch(`https://api.github.com/users/${ username }`)
         console.log(data)
 
         const img = document.querySelector('img[alt="user icon"]')
+        const loadingIcon = document.querySelector('div.loading-icon')
+        img.classList.remove('skeleton', 'skeleton-icon')
+        loadingIcon.style.display = 'none'
+        img.style.display = 'block'
         img.setAttribute('src', data.avatar_url)
 
         const h2 = document.querySelector('h2.name')
+        h2.classList.remove('skeleton', 'skeleton-name')
         if (data.name != null) {
             h2.innerHTML = data.name
         } else {
@@ -31,9 +38,11 @@ fetch(`https://api.github.com/users/${ username }`)
         }
 
         const login = document.querySelector('p.login')
+        login.classList.remove('skeleton', 'skeleton-login')
         login.innerHTML = '@' + data.login
 
         const createdAt = document.querySelector('p.created-at')
+        createdAt.classList.remove('skeleton', 'skeleton-date')
         const fullDate = new Date(data.created_at)
         const day = fullDate.getDate()
         const month = fullDate.toLocaleString('en-US', {
@@ -44,6 +53,7 @@ fetch(`https://api.github.com/users/${ username }`)
         createdAt.innerHTML = 'Joined ' + day + ' ' + month + ' ' + year
 
         const description = document.querySelector('p.description')
+        description.classList.remove('skeleton', 'skeleton-description')
         if (data.bio != null) {
             description.innerHTML = data.bio
         } else {
@@ -51,15 +61,16 @@ fetch(`https://api.github.com/users/${ username }`)
         }
 
         const repos = document.querySelector('.repos-wrapper > .repos')
-        repos.innerHTML = data.public_repos
+        animateCountUp(repos, data.public_repos, 1000)
 
         const followers = document.querySelector('.followers-wrapper > .followers')
-        followers.innerHTML = data.followers
+        animateCountUp(followers, data.followers, 1000)
 
         const following = document.querySelector('.following-wrapper > .following')
-        following.innerHTML = data.following
+        animateCountUp(following, data.following, 1000)
 
         const location = document.querySelector('p.location')
+        location.classList.remove('skeleton', 'skeleton-social')
         const svgLocation = document.querySelector('.location-wrapper > svg')
         if (data.location != null) {
             location.innerHTML = data.location
@@ -72,6 +83,7 @@ fetch(`https://api.github.com/users/${ username }`)
         }
 
         const blog = document.querySelector('a.blog')
+        blog.classList.remove('skeleton', 'skeleton-social')
         const svgBlog = document.querySelector('.blog-wrapper > svg')
         if (data.blog != false) {
             blog.setAttribute('href', data.blog)
@@ -85,6 +97,7 @@ fetch(`https://api.github.com/users/${ username }`)
         }
 
         const twitter = document.querySelector('p.twitter')
+        twitter.classList.remove('skeleton', 'skeleton-social')
         const svgTwitter = document.querySelector('.twitter-wrapper > svg')
         if (data.twitter_username != null) {
             twitter.innerHTML = data.twitter_username
@@ -97,6 +110,7 @@ fetch(`https://api.github.com/users/${ username }`)
         }
 
         const github = document.querySelector('a.github')
+        github.classList.remove('skeleton', 'skeleton-social')
         const svgGithub = document.querySelector('.github-wrapper > svg')
         if (data.html_url != null) {
             github.setAttribute('href', data.html_url)

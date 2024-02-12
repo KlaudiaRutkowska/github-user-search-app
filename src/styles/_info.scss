@@ -23,7 +23,8 @@
                 grid-template-rows: repeat(3, auto);
             }
 
-            > img {
+            > img,
+            .loading-icon {
                 grid-row-start: 1;
                 grid-column-start: 1;
                 grid-row: span 3 / span 3;
@@ -34,6 +35,14 @@
                 @media screen and (min-width: 768px) {
                     width: 117px;
                 }
+            }
+
+            img {
+                display: none;
+            }
+
+            .loading-icon {
+                display: block;
             }
 
             > h2 {
@@ -179,11 +188,6 @@
                 @media screen and (min-width: 768px) {
                     font-size: 15px;
                 }
-
-                //  > svg {
-                //     width: 20px;
-                //     height: 100%;
-                //  }
             }
 
             > .location-wrapper {
