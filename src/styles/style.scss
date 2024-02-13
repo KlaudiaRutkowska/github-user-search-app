@@ -37,11 +37,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // row-gap: 36px;
+    row-gap: 36px;
+    font-family: "Space Mono", monospace;
 
-    .container {
-        font-family: "Space Mono", monospace;
-
+    div.container {
         box-shadow: 0 16px 30px -10px var(--box-shadow-color);
     }
 
