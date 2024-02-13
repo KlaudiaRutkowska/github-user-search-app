@@ -40,16 +40,43 @@
             </button>
         </header>
         <main>
+            <section id="searchbar">
+                <div class="container">
+                    <svg
+                        height="24"
+                        width="25"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M10.609 0c5.85 0 10.608 4.746 10.608 10.58 0 2.609-.952 5-2.527 6.847l5.112 5.087a.87.87 0 01-1.227 1.233l-5.118-5.093a10.58 10.58 0 01-6.848 2.505C4.759 21.16 0 16.413 0 10.58 0 4.747 4.76 0 10.609 0zm0 1.74c-4.891 0-8.87 3.965-8.87 8.84 0 4.874 3.979 8.84 8.87 8.84a8.855 8.855 0 006.213-2.537l.04-.047a.881.881 0 01.058-.053 8.786 8.786 0 002.558-6.203c0-4.875-3.979-8.84-8.87-8.84z"
+                            fill="#0079ff"
+                        />
+                    </svg>
+                    <form>
+                        <div class="input-wrapper">
+                            <span>No results</span>
+                            <input type="text" name="username" placeholder="Search GitHub username…" required>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </section>
+
             <section id="info">
                 <div class="container">
                     <div class="main-info-wrapper">
-                        <img src="" alt="user icon" class="skeleton skeleton-icon"/>
+                        <img
+                            src=""
+                            alt="user icon"
+                            class="skeleton skeleton-icon"
+                        />
                         <div class="loading-icon skeleton skeleton-icon"></div>
                         <h2 class="name skeleton skeleton-name"></h2>
                         <p class="login skeleton skeleton-login"></p>
                         <p class="created-at skeleton skeleton-date"></p>
-                        <p class="description skeleton skeleton-description">
-                        </p>
+                        <p
+                            class="description skeleton skeleton-description"
+                        ></p>
                     </div>
                     <div class="statistics-wrapper">
                         <div class="repos-wrapper">
@@ -110,7 +137,10 @@
                                     />
                                 </g>
                             </svg>
-                            <a href="" class="blog skeleton skeleton-social"></a>
+                            <a
+                                href=""
+                                class="blog skeleton skeleton-social"
+                            ></a>
                         </div>
                         <div class="github-wrapper">
                             <svg
@@ -124,7 +154,10 @@
                                     />
                                 </g>
                             </svg>
-                            <a href="" class="github skeleton skeleton-social"></a>
+                            <a
+                                href=""
+                                class="github skeleton skeleton-social"
+                            ></a>
                         </div>
                     </div>
                 </div>
