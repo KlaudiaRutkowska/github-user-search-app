@@ -1,0 +1,17 @@
+@media screen and (min-width: 320px) {
+    .container {
+        margin-inline: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        margin-inline: 98px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        margin-inline: 355px;
+    }
+}
