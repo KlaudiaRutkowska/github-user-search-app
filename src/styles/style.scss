@@ -65,6 +65,19 @@ body {
         }
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: 0;
+        margin-bottom: 31px;
+        flex-basis: fit-content;
+
+        @media screen and (min-width: 768px) {
+            gap: 24px;
+        }
+    }
+
     section#info > .container,
     section#searchbar > .container {
         background-color: var(--bg-container);
