@@ -1,19 +1,18 @@
 #searchbar > .container {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     column-gap: 8px;
+    height: 60px;
     padding-block: 7px;
     padding-left: 16px;
     padding-right: 7px;
-    margin-bottom: 16px;
 
     @media screen and (min-width: 768px) {
         column-gap: 24px;
+        height: 69px;
         padding-block: 9.5px;
         padding-left: 32px;
         padding-right: 10px;
-        margin-bottom: 24px;
     }
 
     @media screen and (min-width: 1440px) {
@@ -41,7 +40,6 @@
                 outline: none;
                 border: none;
             }
-
 
             span {
                 display: none;
