@@ -41,8 +41,6 @@ const fetchData = (username) => {
 };
 
 const setData = (data) => {
-    console.log(data);
-
     const img = document.querySelector('img[alt="user icon"]');
     const loadingIcon = document.querySelector("div.loading-icon");
     img.classList.remove("skeleton", "skeleton-icon");
